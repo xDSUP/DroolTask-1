@@ -5,26 +5,26 @@ rule "No points under 100 USD"
     when
         requestBean : RequestBean(getAmount() < 100)
     then
-        requestBean.setBalls(0);
+        requestBean.setPoints(0);
 end
 
 rule "100-500 USD plus 100 points"
     when
         requestBean : RequestBean(getAmount() >= 100 && getAmount() < 500)
     then
-        requestBean.setBalls(100);
+        requestBean.setPoints(100);
 end
 
 rule "500 USD-1000 USD plus 500 points"
     when
         requestBean : RequestBean(getAmount() >= 500 && getAmount() < 1000)
     then
-        requestBean.setBalls(500);
+        requestBean.setPoints(500);
 end
 
 rule "1000 USD or more plus 1000 points"
     when
         requestBean : RequestBean(getAmount() >= 1000)
     then
-        requestBean.setBalls(1000);
+        requestBean.setPoints(1000);
 end

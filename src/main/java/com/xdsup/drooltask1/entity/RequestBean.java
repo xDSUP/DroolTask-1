@@ -6,5 +6,5 @@ import lombok.Data;
 @Data
 public class RequestBean {
     private BigDecimal amount;
-    private int balls;
+    private int points;
 }
